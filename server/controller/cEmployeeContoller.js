@@ -1,13 +1,4 @@
-const knex = require('knex');
-const psql = knex({
-  client: 'pg',
-  connection: {
-    host: '127.0.0.1',
-    user: '',
-    password: '',
-    database: 'conservicehr',
-  },
-});
+const psql = require('../model/DbConfig');
 
 const findChange = (before, after) => {
   return Object.keys(before).filter(
